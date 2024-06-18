@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import "variables.css";
+@import "reset.css";
+@import "header.css";
+
+.intro-block, .project-block, .contact-block,
+.packages-block {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.packages-block {
+  justify-content: center;
+}
+
+.contact-block {
+  background-color: var(--section-bg);
+  color: var(--primar-color);
+  justify-content: space-between;
+}
+
+.contact-block .title {
+  margin-bottom: 1rem;
+}
+
+.intro-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.intro-title, .title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.title {
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.info-desc {
+  font-weight: 400;
+  margin-bottom: 2.25rem;
+}
+
+.info-desc-bold {
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.contact-link,
+.slid-link {
+  position: relative;
+}
+
+.contact-link,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:visited,
+.slid-link,
+.slid-link:hover,
+.slid-link:focus,
+.slid-link:visited {
+  color: var(--primar-color);
+}
+
+.contact-link::after,
+.slid-link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0.05rem;
+  background-color: var(--primar-color);
+}
+
+@media all and (min-width: 850px) {
+  .intro-block {
+    max-width: 55rem;
+  }
+
+  .project-block, .intro-block,
+  .contact-block {
+    padding: 2rem 11rem;
+  }
+
+  .project-block .info-desc {
+    max-width: 27.5rem;
+  }
+}
+
+@media all and (max-width: 849.9px) {
+  .intro-block,
+  .project-block {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .contact-block {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media all and (min-width: 567px) {
+  .intro-title {
+    font-size: 2.4rem;
+  }
+
+  .intro-logo {
+    height: 2.6rem;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+}
+
+@media all and (max-width: 566.9px) {
+  .intro-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-logo {
+    height: 2rem;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .info-desc, .info-desc-bold {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+.link-text,
+.link-text:hover,
+.link-text:focus,
+.link-text:active {
+  color: var(--base-color);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/*buttons*/
+.btn-group {
+  display: grid;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.btn-outline-black, .btn-solid-black {
+  border: 0.1rem solid var(--base-color);
+}
+
+.btn-outline-black {
+  color: var(--base-color);
+  background-color: transparent;
+}
+
+.btn-solid-black {
+  background-color: var(--base-color);
+  color: var(--primar-color);
+}
+
+.btn-outline-white {
+  color: var(--primar-color);
+  background-color: transparent;
+  border: 0.1rem solid var(--primar-color);
+}
+
+.btn-solid-green {
+  color: var(--primar-color);
+  background-color: var(--active-color);
+  border: 0.1rem solid var(--active-color);
+
+}
+
+@media (pointer: fine) {
+  .btn-outline-black:hover {
+    background-color: var(--base-color);
+    color: var(--primar-color);
+  }
+
+  .btn-solid-black:hover {
+    color: var(--base-color);
+    background-color: transparent;
+  }
+
+  .btn-outline-white:hover {
+    background-color: var(--primar-color);
+    color: var(--base-color);
+  }
+
+  .btn-solid-green:hover {
+    color: var(--active-color);
+    background-color: transparent;
+  }
+}
+
+@media all and (min-width: 567px) {
+  .btn-group {
+    grid-template-columns: repeat(2, 13rem);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    height: 3.2rem;
+  }
+}
+
+@media all and (max-width: 566.9px) {
+  .btn-group {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+
+/*projects-item*/
+
+.projects-logo {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 0;
+  gap: 0.05rem
+}
+
+.projects-item {
+  position: relative;
+  display: block;
+  width: 33%;
+  min-width: 8rem;
+}
+
+.project-image,
+.project-image-active {
+  width: 100%;
+}
+
+.project-image-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+
+.projects-item:hover .project-image-active {
+  opacity: 1;
+}
+
+/*slider*/
+.packages-block .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slid-item {
+  font-weight: 600;
+}
+
+.slid-item.center {
+  background-color: #414445;
+}
+
+.slid-item.left {
+  background-color: #595B5C;
+}
+
+.slid-item.right {
+  background-color: #2E2F30;
+}
+
+.slid-item.left .slid-title,
+.slid-item.left .text-selected {
+  color: #A3BCFF;
+}
+
+.slid-item.center .slid-title,
+.slid-item.center .text-selected {
+  color: #95B575;
+}
+
+.slid-item.right .slid-title,
+.slid-item.right .text-selected {
+  color: #D4B984;
+}
+
+.slid-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.slid-list-item {
+  font-size: 0.75rem;
+  color: var(--primar-color);
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.delete-text {
+  opacity: .2;
+}
+
+.text-small {
+  font-size: 0.6rem;
+  font-weight: 500;
+  line-height: 0.75rem;
+  padding-bottom: 0.5rem;
+  opacity: .7;
+}
+
+.slid-link {
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  display: inline-block;
+}
+
+@media all and (min-width: 1040px) {
+  .slid-item.left,
+  .slid-item.right {
+    padding: 3.75rem 2rem 2rem;
+  }
+
+  .slid-item.center {
+    padding: 4.75rem 3rem 2rem;
+  }
+
+  .slid-title {
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (min-width: 850px) and (max-width: 1039.9px) {
+  .slid-item.left,
+  .slid-item.right {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .slid-item.center {
+    padding: 3.5rem 1rem;
+  }
+
+  .slid-title {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (max-width: 849.4px) {
+  .container.packages-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slid-item {
+    padding: 3rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .slid-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .slid-item * {
+    transition: opacity 300ms ease;
+  }
+
+  .slick-slide:not(.slick-current) .slid-item * {
+    opacity: 0;
+  }
+
+  .slider .slick-active {
+    transform: scale(1.05);
+  }
+
+  .slider .slid-icon {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .slider .slid-icon.prev {
+    left: 50%;
+    transform: translate3d(-115%, 50%, 0);
+  }
+
+  .slider .slid-icon.next {
+    right: 50%;
+    transform: translate3d(115%, 50%, 0);
+  }
+}
+
+/*modal*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  overflow: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-logo {
+  height: 2rem;
+  max-width: 50%;
+}
+
+.modal-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body.open-modal {
+  overflow: hidden;
+}
+
+body.open-modal .modal {
+  z-index: 100;
+  opacity: 1;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-in img {
+  width: 100%;
+}
+
+.image-slider {
+  position: relative;
+}
+
+.image-slider .slid-icon {
+  position: absolute;
+  top: 50%;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.image-slider .slid-icon.prev {
+  left: 0.1rem;
+}
+
+.image-slider .slid-icon.next {
+  right: 0.1rem;
+}
+
+.image-slider .slid-icon path {
+  fill: var(--primar-color);
+}
+
+@media all and (min-width: 850px) {
+  .modal-init {
+    max-width: 65vmin;
+    margin: 0 auto;
+    padding: 3rem;
+  }
+  .modal-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (max-width: 849.4px) {
+  .modal-init {
+    max-width: 90vmin;
+    margin: 0 auto;
+    padding: 2.25rem;
+  }
+  .modal-header {
+    margin-bottom: 1rem;
+  }
+}
