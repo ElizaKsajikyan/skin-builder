@@ -1,10 +1,16 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: var(--header-bg);
+  z-index: 5;
+}
+
 .navbar, .navbar-nav, .navbar-in {
   display: flex;
   align-items: center;
-}
-
-.navbar {
-  padding: 1.25rem 0;
 }
 
 .navbar-in {

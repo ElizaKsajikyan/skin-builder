@@ -1,6 +1,8 @@
 :root {
   --main-bg: #F7F7F7;
-  --section-bg:#414445;
+  --section-bg: #414445;
+  --header-bg: #F7F7F7CC;
+  --logo-bg: linear-gradient(90deg, #565F68 0%, #353637 100%);
   --dark-color: #353637;
   --base-color: #000000;
   --primar-color: #ffffff;

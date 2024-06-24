@@ -3,6 +3,15 @@ toggleBtn[0].addEventListener('click', function () {
     document.body.classList.toggle('open')
 });
 
+const navLink = document.querySelectorAll('a.nav-link')
+function navigateById() {
+    for (let i = 0; i < navLink.length; i++) {
+        navLink[i].addEventListener('click',function () {
+            document.body.classList.remove('open')
+        })
+    }
+}
+navigateById()
 $('.slider').slick({
     centerMode: true,
     centerPadding: '60px',

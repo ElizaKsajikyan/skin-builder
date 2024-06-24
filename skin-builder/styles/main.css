@@ -6,7 +6,6 @@
 
 .intro-block, .project-block, .contact-block,
 .packages-block {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -18,11 +17,10 @@
 .contact-block {
   background-color: var(--section-bg);
   color: var(--primar-color);
-  justify-content: space-between;
 }
 
 .contact-block .title {
-  margin-bottom: 1rem;
+  margin-bottom: 7.5rem;
 }
 
 .intro-title {
@@ -31,6 +29,11 @@
   align-items: flex-start;
   color: var(--dark-color);
   margin-bottom: 1rem;
+}
+
+.intro-logo {
+  background-image: var(--logo-bg);
+  color: var(--primar-color);
 }
 
 .intro-title, .title {
@@ -83,13 +86,33 @@
 }
 
 @media all and (min-width: 850px) {
+  .intro-block, .project-block, .contact-block,
+  .packages-block {
+    min-height: calc(100vh - 3.75rem);
+  }
+
   .intro-block {
     max-width: 55rem;
   }
 
+  #intro, #packages, #projects, #contacts {
+    padding-top: 8.4rem;
+  }
+
+  #packages,
+  #contacts {
+    padding-top: 5.9rem;
+  }
+
   .project-block, .intro-block,
   .contact-block {
-    padding: 2rem 11rem;
+    padding-left: 11rem;
+    padding-right: 11rem;
+  }
+
+  .contact-block {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .project-block .info-desc {
@@ -98,6 +121,18 @@
 }
 
 @media all and (max-width: 849.9px) {
+  .intro-block, .project-block, .contact-block,
+  .packages-block {
+    min-height: calc(100vh - 2.4rem);
+  }
+  #intro, #packages, #projects, #contacts {
+    padding-top: 5rem;
+  }
+
+  #packages {
+    padding-top: 2.5rem;
+  }
+
   .intro-block,
   .project-block {
     padding-top: 1rem;
@@ -106,16 +141,19 @@
 
   .contact-block {
     padding: 1.5rem 1.25rem;
+    justify-content: space-between;
   }
 }
 
 @media all and (min-width: 567px) {
   .intro-title {
     font-size: 2.4rem;
+    line-height: 2.976rem;
   }
 
   .intro-logo {
-    height: 2.6rem;
+    padding-right: 0.4335rem;
+    padding-left: 0.4335rem;
   }
 
   .title {
@@ -126,12 +164,13 @@
 @media all and (max-width: 566.9px) {
   .intro-title {
     font-size: 1.8rem;
+    line-height: 2.108rem;
   }
 
   .intro-logo {
-    height: 2rem;
-    max-width: 100%;
-    object-fit: contain;
+    line-height: 2rem;
+    padding-right: 0.3335rem;
+    padding-left: 0.3335rem;
   }
 
   .info-desc, .info-desc-bold {
@@ -280,7 +319,17 @@
 }
 
 .slid-item {
+  position: relative;
   font-weight: 600;
+  transition: transform 700ms ease;
+}
+
+@media (pointer: fine) {
+  .slid-item:hover {
+    z-index: 2;
+    transform: scale(1.05);
+  }
+
 }
 
 .slid-item.center {
@@ -341,13 +390,10 @@
 }
 
 @media all and (min-width: 1040px) {
-  .slid-item.left,
-  .slid-item.right {
-    padding: 3.75rem 2rem 2rem;
-  }
-
-  .slid-item.center {
-    padding: 4.75rem 3rem 2rem;
+  .slid-item {
+    padding: 3rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .slid-title {
@@ -356,13 +402,10 @@
 }
 
 @media all and (min-width: 850px) and (max-width: 1039.9px) {
-  .slid-item.left,
-  .slid-item.right {
-    padding: 3rem 1rem 2rem;
-  }
-
-  .slid-item.center {
-    padding: 3.5rem 1rem;
+  .slid-item {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .slid-title {
@@ -504,6 +547,7 @@ body.open-modal .modal {
     margin: 0 auto;
     padding: 3rem;
   }
+
   .modal-header {
     margin-bottom: 3rem;
   }
@@ -515,6 +559,7 @@ body.open-modal .modal {
     margin: 0 auto;
     padding: 2.25rem;
   }
+
   .modal-header {
     margin-bottom: 1rem;
   }
