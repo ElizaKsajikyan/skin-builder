@@ -58,7 +58,7 @@ const modalData = [
         id: 1,
         bgColor: '#102C40',
         logo: 'images/resent-projects/BigBro-modal.svg',
-        images: ['images/image-2.jpg']
+        images: ['images/image-2.jpg', 'images/image-1.jpg']
     },
     {
         id: 2,
@@ -70,7 +70,7 @@ const modalData = [
         id: 3,
         bgColor: '#172673',
         logo: 'images/resent-projects/shotbet-modal.svg',
-        images: ['images/image-1.jpg']
+        images: ['images/image-1.jpg','images/image-2.jpg']
     }
 ]
 

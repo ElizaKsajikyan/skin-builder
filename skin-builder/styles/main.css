@@ -547,7 +547,8 @@ body.open-modal .modal {
 
 @media all and (min-width: 850px) {
   .modal-init {
-    max-width: 65vmin;
+    width: calc(44rem);
+    max-width: 100%;
     margin: 0 auto;
     padding: 3rem;
   }
