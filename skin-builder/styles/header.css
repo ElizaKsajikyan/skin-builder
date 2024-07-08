@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.25rem 0;
+  padding: 0.9rem 0;
   background: var(--header-bg);
   z-index: 5;
 }
@@ -173,7 +173,7 @@ body.open .navbar-toggle .navbar-icon:nth-child(3) {
 
 @media all and (min-width: 850px) {
   .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -185,6 +185,7 @@ body.open .navbar-toggle .navbar-icon:nth-child(3) {
   .navbar-btn {
     font-size: 0.8rem;
     padding: 0.5rem 2.5rem;
+    line-height: 0.79rem;
   }
 }
 

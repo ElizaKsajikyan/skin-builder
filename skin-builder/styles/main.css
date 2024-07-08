@@ -100,6 +100,10 @@
     padding-top: 5.9rem;
   }
 
+  #contacts {
+    padding-bottom: 3.1rem;
+  }
+
   .project-block, .intro-block,
   .contact-block {
     padding-left: 11rem;
@@ -265,7 +269,7 @@
   }
 
   .btn {
-    height: 3.2rem;
+    height: 3.1rem;
   }
 }
 
@@ -383,25 +387,26 @@
   font-size: 0.6rem;
   font-weight: 500;
   line-height: 0.75rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.005rem;
   opacity: .7;
 }
 
 .slid-link {
   font-size: 0.9rem;
-  margin-top: 2.5rem;
+  margin-top: 1.55rem;
   display: inline-block;
 }
 
 @media all and (min-width: 1040px) {
   .slid-item {
-    padding: 3rem 2rem;
+    padding: 3.75rem 2rem 2rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
 
   .slid-title {
     margin-bottom: 3rem;
+    line-height: 1.488rem
   }
 }
 
