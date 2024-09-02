@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,7 +37,7 @@
 
 .nav-link {
   position: relative;
-  color: var(--base-color);
+  color: var(--black-90);
 }
 
 .nav-link:after {
@@ -95,7 +95,7 @@
   position: absolute;
   height: 0.1rem;
   width: 100%;
-  background: var(--dark-color);
+  background-color: var(--dark-color);
   opacity: 1;
   left: 0;
   transform: rotate(0deg);

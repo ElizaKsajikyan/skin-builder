@@ -5,6 +5,7 @@
   --logo-bg: linear-gradient(90deg, #565F68 0%, #353637 100%);
   --dark-color: #353637;
   --base-color: #000000;
+  --black-90: rgba(0, 0, 0, .9);
   --primar-color: #ffffff;
   --active-color: #95B575;
 }

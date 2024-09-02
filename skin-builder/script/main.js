@@ -75,7 +75,6 @@ const modalData = [
 ]
 
 for (let i = 0; i < modalToggle.length; i++) {
-    console.log(modalToggle[i]);
     modalToggle[i].addEventListener('click', function () {
         const id = this.getAttribute('index');
         modalData.filter(item => {
@@ -120,3 +119,8 @@ function modalClose() {
         document.body.style = null;
     })
 }
+
+
+$(document).ready(function () {
+    $("#fullview").fullView();
+});
